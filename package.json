@@ -1,0 +1,45 @@
+{
+  "name": "rabbitmq-gateway-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "engines": {
+    "node": "~10.20.1"
+  },
+  "scripts": {
+    "start": "node -r @babel/register index.js",
+    "dev": "NODE_ENV=development nodemon -r @babel/register index.js",
+    "test": "NODE_ENV=test node -r @babel/register spec/run.js",
+    "heroku-prebuild": "npm config set '//registry.npmjs.org/:_authToken' '${NPM_TOKEN}'"
+  },
+  "author": "",
+  "dependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "babel-runtime": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "config": "^1.31.0",
+    "express": "^4.16.3",
+    "glob": "^7.1.2",
+    "graphql-request": "^1.8.2",
+    "install": "^0.12.2",
+    "libphonenumber-js": "^1.7.54",
+    "lodash": "^4.17.21",
+    "node-fetch": "2.0",
+    "rabbot": "^2.1.0",
+    "reflect-metadata": "^0.1.12",
+    "require-directory": "^2.1.1",
+    "twilio": "^3.20.0",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "apollo-server": "^2.1.0",
+    "graphql": "^14.0.2",
+    "jasmine": "^3.3.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "nodemon": "^1.18.9"
+  }
+}
